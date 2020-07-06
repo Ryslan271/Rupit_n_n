@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="static\css.css" href="img" rel='stylesheet' type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>RuPit</title>
+</head>
+<style>
+    body {
+        background-color: rgb(0, 0, 0);
+        color: var(--color-text-main);
+        font-family: var(--yandex-sans);
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #div_content1 {
+        background-color: rgb(54, 53, 53);
+        margin: 0 auto;
+        width: 1240px;
+        height: 230px;
+        margin-top: 30px;
+        margin-left: 30px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 10px;
+    }
+    ul li {
+        color: rgb(236, 236, 236);
+        font-size: 26px;
+    }
+    ul li:first-line  {
+        font-size: 23px;
+        color: #c7c5c5;
+    }
+
+    .jstep {
+        float: left;
+        width: 19%;
+        height: 300px;
+    }
+    .jstep-1 {
+    
+    }
+    .jstep-2 {
+     margin-top: 50px;
+    }
+    .jstep-3 {
+        margin-top: 130px;
+    }
+    .jstep-4 {
+        margin-top: 160px;
+    }
+    .jstep-5 {
+        margin-top: 230px;
+    }
+    .icon-step {
+        width: 127px;
+        height: 127px;
+        border-radius: 100%;
+        border: solid 8px rgb(228, 224, 224);
+        margin: auto;
+    }
+    .istep-1,.istep-2,.istep-3,.istep-4,.istep-5 {
+        background-position: center center;      
+        background-repeat: no-repeat;      
+        background-size: inherit;
+    }
+    .istep-1 {
+        background-image: url(images/icon/step-1.png);
+    }
+    .istep-2 {
+        background-image: url(images/icon/step-2.png);
+    }
+    .istep-3 {
+        background-image: url(images/icon/step-3.png);
+    }
+    .istep-4 {
+        background-image: url(images/icon/step-4.png);
+    }
+    .istep-5 {
+        background-image: url(images/icon/step-5.png);
+    }
+    #a1{
+        color: #9ea2c5;
+    }
+</style>
+<body>
+    <div>
+        <div id="header">
+            <h1>
+                <a href='/content' id='atop'>Ru<span style="color: aquamarine;">Pit</span>:</a>
+                <a href='/content' id='atop' style="float: right;">Lili</a>
+                Урок №3
+                <a href="/#" id='alogin' style="float: right; margin-right: 80px;">Menu</a>
+            </h1>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="/Знакомство со средой" id="about">№1 Знакомство со средой</a>
+        <a href="/Простые встроенные функции" id="blog" style="top: 178px;">№2 Простые встроенные функции</a>
+        <a href="/Знакомство со списками и словарями" id="projects" style="top: 260px">№4 Списки и словари</a>
+        <a href="/Функции" id="contact" style="top: 318px;">№5 Функции</a>
+    </div>
+    <div id="div1" style="height: 17850px; margin-bottom: 50px;">
+        <div style="height: 30px;"></div>
+
+        <div style="margin-left: 320px;">
+            <h1 id="h12" >Урок №3: Знакомство с циклами: while и for</h1>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 3200px;">
+            <h1 id="h1" style="margin-left: 25px; color: rgb(255, 207, 102);">Глава 1: while</h1>
+            <h1 id="h1" style="margin-left: 25px;">1. Цикл while</h1>
+
+            <p id="p_1">Сегодня мы научимся повторять заданные действия несколько раз. Для этого существуют операторы циклов. Мы разберем оператор цикла while. Он выполняет блок кода, пока истинно какое-то условие.</p>
+            <p id="p_1">Напомним, условный оператор if проверяет условие и, в зависимости от того, истинно оно или ложно, выполняет либо не выполняет следующий записанный с отступом блок. После этого программа в любом случае выполняется дальше (там ещё может быть elif или else, но сути это не меняет).</p>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #e6e9d2;">Оператор while («пока») тоже проверяет условие и тоже в случае его истинности выполняет следующий блок кода («тело цикла»). Однако после выполнения этого блока кода выполняется не то, что идёт после него, а снова проверяется условие, записанное после while.</p>
+            </div>
+
+            <p id="p_1">Ведь при выполнении тела цикла значения каких-то переменных могли измениться — в результате условие цикла может уже не быть истинным. Если условие всё ещё истинно, тело цикла выполняется снова. Как только условие цикла перестало выполняться (в том числе если оно с самого начала не было выполнено), программа идёт дальше — выполняются команды, записанные после тела цикла.</p>
+            <p id="p_1">Условие цикла записывается как и для if — с помощью операций отношения (>, >=, <, <=, !=, == ). Cложные условия можно составлять с помощью логических операций not, and, or.</p>
+            <p id="p_1">Действия, расположенные в теле цикла (блок кода) , записываются со смещением вправо на 4 пробела относительно начала слова while. Переменные, входящие в условие, должны на момент проверки условия цикла иметь значения.</p>
+
+            <div id="div_content_prog" style="width: 350px; height: 160px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">while</span> условие:</p>
+                <p id="p_1" style="margin-left: 60px;">блок кода (тело цикла)</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #e6e9d2;">Один шаг цикла (выполнение тела цикла) ещё называют итерацией.</p>
+                <p id="p_1" style="color: #e6e9d2;">Используйте цикл while всегда, когда какая-то часть кода должна выполниться несколько раз — причём невозможно заранее сказать, сколько именно.</p>
+            </div>
+
+            <p id="p_1">Давайте посмотрим программу, в которой цикл будет выполняться пока не введут число меньше 0:</p>
+
+            <div id="div_content_prog" style="width: 650px; height: 400px; padding: 3px;">
+                <p id="p_1">number = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">while</span> number > <span style="color: #ff4500; font-weight: bold;">0</span>:</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Вы ввели положительное число! Вводите дальше.</span>')</p>
+                <p id="p_1">number = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Так-так, что тут у нас...</span>')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Вы ввели отрицательное число или ноль. Всё.</span>')</p>
+            </div>
+
+            <p id="p_1">Разберёмся, как будет работать эта программа.</p>
+            <p id="p_1">Сначала выполняется первая строчка: number = int(input()) — пользователь вводит целое число. (Мы предполагаем, что пользователь действительно ввёл число, и программа не вылетела с ошибкой.) Предположим, он ввёл число 10. Оно записано в переменной number.</p>
+            <p id="p_1">Выполняется вторая строчка: while number > 0: — «пока number > 0» — здесь проверяется, выполнено ли условие number > 0. Поскольку мы предположили, что number в этот момент равно 10, то да, условие выполнено, поэтому дальше выполняется блок, записанный с отступом — тело цикла.</p>
+            <p id="p_1">Третья строчка программы выводит на экран строку, тут всё понятно.</p>
+            <p id="p_1">Четвёртая строчка вновь считывает с клавиатуры число и сохраняет его в переменную number. Пусть пользователь ввёл 2.</p>
+            <p id="p_1">Когда выполнение программы доходит до конца тела цикла, происходит возврат к заголовку цикла (второй строчке программы) и повторная проверка условия. Поскольку 2 > 0, снова выполняется тело цикла.</p>
+            <p id="p_1">Третья строчка снова выводит на экран сообщение, четвёртая строчка снова считывает число (пусть это будет число 3), пятая строчка снова выводит на экран сообщение...</p>
+            <p id="p_1">Закончив тело цикла, опять проверяем условие в заголовке. number равно 3, 3 > 0, поэтому продолжаем.</p>
+            <p id="p_1">Третья строчка опять выводит на экран сообщение, четвёртая строчка опять считывает число. Пусть теперь это будет −1 — обратите внимание, переменная number на каждой итерации цикла приобретает новое значение! Пятая строчка опять выводит на экран сообщение...</p>
+            <p id="p_1">Вновь вернувшись на вторую строчку, получаем, что −1 > 0 — ложно. Поэтому цикл завершается, тело цикла больше не выполняется, прыгаем сразу на следующую после цикла строчку программы — шестую. Она выводит последнее сообщение.</p>
+            <p id="p_1">Всё.</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 520px;">
+            <h1 id="h1" style="margin-left: 25px;">2.Составной оператор присваивания</h1>
+            <p id="p_1">Напомним, что в операторе присваивания одно и то же имя переменной может стоять и справа (в составе какого-то выражения), и слева. В этом случае сначала вычисляется правая часть со старым значением переменной, после чего результат становится новым значением этой переменной. Ни в коем случае не воспринимайте такой оператор присваивания как уравнение!</p>
+
+            <div id="div_content_prog" style="width: 700px; height: 200px; padding: 3px;">
+                <p id="p_1">number = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())  <span style="color: #808080;"># например, 5</span></p>
+                <p id="p_1">number = number + <span style="color: #ff4500; font-weight: bold;">1</span>  <span style="color: #808080;"># тогда здесь number становится равным 6</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>(number)</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+            <div id="div_content_v">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #e6e9d2;">Для конструкций вида number = number + 1, также существует сокращённая форма записи оператора присваивания: number += 1. Аналогично оператор x = x + y можно записать как x += y, оператор x = x * y — как x *= y, и так для любого из семи арифметических действий.</p>
+            </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 2580px;">
+            <h1 id="h1" style="margin-left: 25px;">3. Сигнал остановки</h1>
+
+            <p id="p_1">Рассмотрим такую задачу: пользователь вводит числа. Пусть это будут цены на купленные в магазине товары, а наша программа — часть программного обеспечения кассового аппарата. Ввод «−1» — сигнал остановки. Нужно сосчитать сумму всех введённых чисел (сумму чека).</p>
+            <p id="p_1">Поскольку требуется повторить нечто (ввод очередной цены) неизвестное количество раз, потребуется цикл while. Нам понадобится как минимум две переменные: price для цены очередного товара и total для общей суммы.</p>
+            <p id="p_1">Если бы мы знали точно, что пользователю надо купить ровно три товара, то цикл (и ввод «–1» как условие его прерывания) был бы не нужен. Тогда программа могла бы выглядеть так:</p>
+
+            <div id="div_content_prog" style="width: 600px; height: 500px; padding: 3px;">
+                <p id="p_1">total = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1">total = total + price </p>
+                <p id="p_1">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1">total = total + price </p>
+                <p id="p_1">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1">total = total + price</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Сумма введённых чисел равна</span>', total)</p>
+            </div>
+
+            <p id="p_1">Обратите внимание: мы назвали переменные осмысленно. Это очень облегчит жизнь программисту, который будет читать наш код позже — даже если это будете вы сами неделю спустя. Однако интерпретатор Python к этому факту совершенно равнодушен. Чтобы значения переменных соответствовали названиям и тому смыслу, который мы в них закладываем, нужно поддерживать переменные в актуальном состоянии. И только вы, программист, можете это сделать. С переменной price всё более или менее понятно: её значение обновляется при считывании с клавиатуры на каждой итерации цикла, как это делалось во многих других задачах. total сначала равно нулю: до начала ввода цен их сумма, конечно, ноль. Однако значение переменной total устаревает каждый раз, когда пользователь вводит цену очередного товара. Поэтому нам нужно прибавить к значению total только что введённую цену, чтобы эта переменная по-прежнему обозначала сумму цен всех купленных товаров.</p>
+            <p id="p_1">Если бы мы хотели сократить запись, можно было бы организовать цикл, который выполнился бы ровно три раза. Для этого нам потребуется переменная счетчик, которая внутри цикла будет считать каждую итерацию цикла. А условием выхода — поставим выполнение нужного количества итераций:</p>
+
+            <div id="div_content_prog" style="width: 700px; height: 460px; padding: 3px;">
+                <p id="p_1">count = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1">total = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >while</span> count <  <span style="color: #ff4500; font-weight: bold;">3</span>:</p>
+                <p id="p_1" style="margin-left: 60px;">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1" style="margin-left: 60px;">total = total + price</p>
+                <p id="p_1" style="margin-left: 60px;">count = count + <span style="color: #ff4500; font-weight: bold;">1</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Сумма введённых чисел равна</span>', total)</p>
+            </div>
+
+            <p id="p_1">Обратите внимание, что total и count должны обнуляться до цикла.</p>
+            <p id="p_1">Однако у нас в задаче количество товаров неизвестно, поэтому понадобится цикл до ввода сигнала остановки
+                 («–1»). С учётом сказанного выше программа будет выглядеть так:</p>
+
+            
+            <div id="div_content_prog" style="width: 750px; height: 460px; padding: 3px;">
+                <p id="p_1">total = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Вводите цены; для остановки введите -1.</span>')</p>
+                <p id="p_1">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >while</span> price > <span style="color: #ff4500; font-weight: bold;">0</span>:</p>
+                <p id="p_1" style="margin-left: 60px;">total = total + price  <span style="color: #808080;"># можно заменить на аналогичное  total += price</span></p>
+                <p id="p_1" style="margin-left: 60px;">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Общая стоимость равна</span>', total)</p>
+            </div>    
+        </div> 
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 1950px;">
+            <h1 id="h1" style="margin-left: 25px;">4. Подсчет количества элементов, удовлетворяющих условию</h1>
+
+            <p id="p_1">А теперь рассмотрим ещё одну задачу.</p>
+            <p id="p_1">Пользователь вводит целые числа. Ввод чисел прекращается, если введено число 0. Необходимо определить сколько чисел среди введенных оканчивались на 2 и были кратны числу 4. Теперь нам надо проверять последовательность чисел.</p>
+            <p id="p_1">Для каждого введенного числа надо делать проверку, соответствует ли оно условию. Если оно подходит под условие, то увеличиваем счётчик таких чисел.</p>
+            <p id="p_1">И уже после цикла, когда остановился ввод чисел — выводим результат — посчитанное количество нужных чисел.</p>
+
+            <div id="div_content_prog" style="width: 600px; height: 460px; padding: 3px;">
+                <p id="p_1">count = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1">number = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >while</span> number != <span style="color: #ff4500; font-weight: bold;">0</span>:</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;" >if</span> number % <span style="color: #ff4500; font-weight: bold;">10</span> == <span style="color: #ff4500; font-weight: bold;">2</span> and number % <span style="color: #ff4500; font-weight: bold;">4</span> == <span style="color: #ff4500; font-weight: bold;">0</span>:</p>
+                <p id="p_1" style="margin-left: 120px;">count += <span style="color: #ff4500; font-weight: bold;">1</span></p>
+                <p id="p_1" style="margin-left: 60px;">number = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Количество искомых чисел:</span>', count)</p>
+            </div>
+
+            <p id="p_1">Обратите внимание, до цикла необходимо задать начальное значение для переменной count. Ведь когда придет первое подходящее под условие число, у нас count будет увеличиваться на 1, относительно предыдущего значения. А значит, это значение должно быть задано.</p>
+            <p id="p_1">Давайте посмотрим, как будет работать эта программа для последовательности чисел: 12, 3, 32, 14, 0.</p>
+
+            <div style="height: 30px;"></div>
+
+            <div align="center">
+                <img src="static/img/while-table.png" id="img_min" style="width: 900px;">
+            </div>
+
+            <p id="p_1">Вот материал для лучшего ознакомления : <a href="https://pythonru.com/osnovy/cikl-while-v-python" id="a_sat" target="_blank">сайт с while :D</a></p>
+        </div> 
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 2300px;">
+            <h1 id="h1" style="margin-left: 25px; color: rgb(255, 207, 102);">Глава 2: for</h1>
+            <h1 id="h1" style="margin-left: 25px;">1. Именованные аргументы функции print</h1>
+
+            <p id="p_1">Мы уже пользовались тем, что функция print при выводе разделяет аргументы пробелами, а в конце переходит на новую строчку.</p>
+            <p id="p_1">Часто это удобно. Но что, если от этого нужно избавиться? В примере ниже пробелы появляются не только после двоеточий (что хорошо), но и перед запятой (что плохо).</p>
+
+            <div id="div_content_prog" style="width: 750px; height: 300px; padding: 3px;">
+                <p id="p_1">measures = <span style="color: #ff4500; font-weight: bold;">7</span></p>
+                <p id="p_1">cuts = <span style="color: #ff4500; font-weight: bold;">1</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Количество отмеров:</span>', measures, '<span style="color: #4d6dff;">, количество отрезов:</span>', cuts)</p>
+                <p id="p_1"><span style="color: #808080;"># выведет: "Количество отмеров: 7 , количество отрезов: 1"</span></p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #e6e9d2;">Для такой тонкой настройки вывода у функции print существуют необязательные именованные аргументы.</p>
+                <p id="p_1" style="color: #e6e9d2;">(Такие удобные инструменты бывают и у других функций, мы познакомимся с ними позже).</p>
+            </div>
+
+            <p id="p_1">Обычно при вызове функции мы пишем имя функции, а затем в скобках её аргументы через запятую. Стандартный способ сообщить функции, что и с какими аргументами делать (например, какой из аргументов функции print вывести первым, какой вторым и т. д.), — это передать аргументы в нужном порядке. Например, функция print выводит аргументы именно в том порядке, в котором их ей передали. Однако есть и другой способ — именованные аргументы. Чтобы при вызове функции передать ей именованный аргумент, нужно после обычных аргументов написать через запятую имя аргумента, знак «=» и значение аргумента.</p>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #e6e9d2;">Функция print наряду с другими аргументами может (вместе или по отдельности) принимать вот таких два аргумента:
+                     <span style="color: #ebc0c0;">sep</span> — разделитель аргументов (по умолчанию пробел) и <span style="color: #ebc0c0;">end</span> — то, что выводится после вывода всех аргументов (по умолчанию — символ начала новой строки).</p>
+            </div>
+
+            <p id="p_1">В частности, если end сделать пустой строкой, то print не перейдёт на новую строчку, и следующий print продолжит вывод прямо на этой же строке.</p>
+
+            <div id="div_content_prog" style="width: 750px; height: 460px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">При</span>')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">вет!</span>')  </p>
+                <p id="p_1"><span style="color: #808080;"># эти две строки кода выведут "При" и "вет!" на отдельных строках</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">При</span>', end='')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">вет!</span>')  <span style="color: #808080;"># эти две строки кода выведут "Привет!"</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Раз</span>', '<span style="color: #4d6dff;">два</span>', '<span style="color: #4d6dff;">три</span>')  <span style="color: #808080;"># выведет "Раз два три"</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Раз</span>', '<span style="color: #4d6dff;">два</span>', '<span style="color: #4d6dff;">три</span>', sep='--')  <span style="color: #808080;"># выведет "Раз--два--три"</span></p>
+            </div>
+
+            <p id="p_1">Обратите внимание: знак «=» здесь не выполняет никакого присваивания, переменных end и sep не появляется.</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content_v" style="height: 420px;">
+            <h1 id="h11">Важно: PEP8</h1>
+            <p id="p_1" style="color: #e6e9d2;">Не используйте пробелы вокруг знака «=», если он используется для обозначения именованного аргумента.</p>
+            <p id="p_1" style="color: #e6e9d2;">Правильно:</p>
+            <p id="p_1" style=" font-family: monospace;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">При</span>', end='')</p>
+            <p id="p_1" style="color: #e6e9d2; text-decoration: line-through;">Неправильно:</p>
+            <p id="p_1" style=" font-family: monospace;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">При</span>', end = '')</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 1700px;">
+            <h1 id="h1" style="margin-left: 25px;">2. Специальные символы в строках</h1>
+
+            <p id="p_1">Можно задаться вопросом: как указать значение end по умолчанию — символ начала новой строчки? Ведь это специальный символ, который нельзя сделать частью строки, просто поместив его между кавычек — это вызовет ошибку.</p>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Экранирующая последовательность</h1>
+                <p id="p_1" style="color: #e6e9d2;">Если внутри кавычек встречается символ «\» (обратная косая черта, обратный слэш, бэкслэш), то он вместе со следующим после него символом образует экранирующую последовательность (escape sequence) и воспринимается интерпретатором как единый специальный символ.</p>
+            </div>
+
+            <p id="p_1">В частности, «\n» — это символ начала новой строки. Кроме того: «\t» — табуляция, «\’» — кавычка, «\\» — просто бэкслэш. Использование экранирующих последовательностей вместо специальных символов называется их экранированием.</p>
+
+            <div id="div_content_prog" style="width: 700px; height: 200px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">восход\t07:15\nзакат\t22:03</span>')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Предыдущая строка этой программы выглядит так:</span></p>
+                <p id="p_1" style="margin-left: 85px;"><span style="color: #4d6dff;">print(\'восход\\t07:15\\nзакат\\t22:03\')</span>')</p>
+            </div>
+
+            <p id="p_1">Таким образом, значения именованных аргументов функции print по умолчанию такие: print(..., sep=’ ’, end=’\n’).</p>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #e6e9d2;">При этом, если приписать букву r перед открывающей строку кавычкой, то бэкслэши будут считаться обычными символами. А если открывать и закрывать строку не одной, а тремя кавычками подряд, то внутри можно делать обычные переводы строки (внутри одинарных кавычек так делать нельзя).</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_prog" style="width: 700px; height: 280px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(r'<span style="color: #4d6dff;">\\\\\\\nnnnn <- забор, переходящий в низкую изгородь</span>')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('''<span style="color: #4d6dff;">Нужно сказать много важного.</span></p>
+                <p id="p_1"><span style="color: #4d6dff;">Одной строки для этого мало.</span></p>
+                <p id="p_1"><span style="color: #4d6dff;">Зато три - в самый раз.</span>''')</p>
+            </div>
+
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 2700px;">
+            <h1 id="h1" style="margin-left: 25px;">3. Цикл for</h1>
+
+            <p id="p_1">Цикл for выполняет блок кода заданное количество раз.</p>
+
+            
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Синтаксис</h1>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >for</span> ... in <span style="color: #6dc993;">range</span>(...):</p>
+                <p id="p_1" style=" margin-left: 60px;"> блок кода (тело цикла)</p>
+            </div>
+
+            <p id="p_1">Как и у while, у цикла for есть заголовок, заканчивающийся двоеточием, и тело цикла, которое записывается с отступом в 4 пробела. В цикле вида «for ... in range(...):» вместо первого двоеточия указывается какая-то переменная, которая на начальной итерации принимает значение 0, на следующей — 1, и так далее, до значения указанного в range(...) — само это значение переменная не принимает. Диапазон значений переменной-итератора от 0 включая и до значения, указанного в range(...), не включая его.</p>
+            <p id="p_1">Вот программа, которая выводит на экран подряд (на отдельных строчках) целые числа от 0 (включительно) до n (не включительно).</p>
+
+            <div id="div_content_prog" style="width: 300px; height: 200px; padding: 3px;">
+                <p id="p_1">n = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >for</span> i <span style="color: #ff7700; font-weight: bold;" >in</span> <span style="color: #6dc993;">range</span>(n):</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold; margin-left: 60px;">print</span>(i)</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">range</h1>
+                <p id="p_1" style="color: #e6e9d2;">range означает «диапазон», то есть for i in range(n) читается как «для (всех) i в диапазоне (от 0 включительно) до n (не включительно)...». Цикл выполняется n раз.</p>
+            </div>
+
+            <p id="p_1">Давайте вспомним задачу, где мы три раза получали цены на товар и вычисляли общую цену товара.</p>
+            <p id="p_1">Вот так мы её записали через цикл while:</p>
+
+            <div id="div_content_prog" style="width: 700px; height: 460px; padding: 3px;">
+                <p id="p_1">count = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1">total = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >while</span> count <  <span style="color: #ff4500; font-weight: bold;">3</span>:</p>
+                <p id="p_1" style="margin-left: 60px;">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1" style="margin-left: 60px;">total = total + price</p>
+                <p id="p_1" style="margin-left: 60px;">count = count + <span style="color: #ff4500; font-weight: bold;">1</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Сумма введённых чисел равна</span>', total)</p>
+            </div>
+
+            <p id="p_1">Теперь мы её можем записать через цикл for, который будет выполняться 3 раза:</p>
+
+            <div id="div_content_prog" style="width: 550px; height: 360px; padding: 3px;">
+                <p id="p_1">total = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >for</span> i <span style="color: #ff7700; font-weight: bold;" >in</span> <span style="color: #6dc993;">range</span>(<span style="color: #ff4500; font-weight: bold;">3</span>):</p>
+                <p id="p_1" style="margin-left: 60px;">price = <span style="color: #6dc993;">float</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1" style="margin-left: 60px;">total = total + price</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Сумма введённых чисел равна</span>', total)</p>
+            </div>
+
+            <p id="p_1">В данном случае переменная счётчик изменяется сама в рамках заданных значений.</p>
+            <p id="p_1">Запустите эту программу с отладчиком и пройдите её пошагово. Можно поставить breakpoint на первую же строчку или начать выполнение программы кнопкой F7. Следите за тем, как меняется значение переменной i. Обратите внимание, что цикл for присваивает переменной i (она называется итератором цикла) значения (0, потом 1...), хотя нигде нет оператора присваивания «=» или его родственников типа «+=».</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 960px;">
+            <h1 id="h1" style="margin-left: 25px;">4. Соглашения об именовании переменных</h1>
+
+            <p id="p_1">В программах, решающих абстрактные, математические задачи, допустимо называть переменные короткими и непонятными именами типа n и i. Однако этого лучше избегать. Кроме того, стоит соблюдать общепринятые договорённости: буквой n обычно обозначают количество чего-либо (например, итераций цикла). При этом, если есть хоть какая-то определённость (например, речь идёт о количестве автомобилей), то стоит и переменную назвать более понятно (например, cars). Буквами i и j (по-русски они традиционно читаются как «и» и «жи») обычно обозначают итераторы цикла for.</p>
+            <p id="p_1">Ещё один пример: программа, подсчитывающая сумму всех целых чисел, которые меньше данного.</p>
+
+            <div id="div_content_prog" style="width: 600px; height: 460px; padding: 3px;">
+                <p id="p_1">n = <span style="color: #6dc993;">int</span>(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1">total = <span style="color: #ff4500; font-weight: bold;">0</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >for</span> i <span style="color: #ff7700; font-weight: bold;" >in</span> <span style="color: #6dc993;">range</span>(n):</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Рассматриваем число</span>', i)</p>
+                <p id="p_1" style="margin-left: 60px;">total += i</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Промежуточная сумма равна</span>', total)</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;" >print</span>('<span style="color: #4d6dff;">Итоговая сумма всех этих чисел равна</span>', total)</p>
+            </div>
+
+            <p id="p_1">Вот материал для лучшего ознакомления : <a href="https://python-scripts.com/loops-for-while" id="a_sat" target="_blank">сайт с for :D</a></p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content_v">
+            <h1 id="h1" style="margin-left: 25px; color: rgb(255, 207, 102);">Когда какой цикл использовать?</h1>
+            <p id="p_1">— Цикл <span style="color: #ee9b9b;">while</span> нужен, когда какой-то кусок кода должен выполниться несколько раз, причём заранее неизвестно, сколько именно.</p>
+            <p id="p_1">— Цикл <span style="color: #ee9b9b;">for</span> нужен, когда какой-то кусок кода должен выполниться несколько раз, при этом известно сколько раз ещё до начала цикла.
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 220px;">
+            <h1 id="h1" style="margin-left: 25px;">Конец третьего урока.</h1>
+            <p id="p_1">Если все понятно, то предлогаю пройти на 4 урок, а лучше отдохните и наберитесь сил</p>
+            <p id="p_1">Но все же вот ссылка ;)  <a href="/Знакомство со списками и словарями" id="a1">Знакомство со списками и словарями</a></p>
+        </div>
+    </div>
+    
+    <div class="scroll_panel">
+        <div class="go-up" id='ToTop'>⇧</div>
+        <div class="go-down" id='OnBottom'>⇩</div>
+    </div>
+
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+        if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+        $(window).scroll(function(){
+        if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+        else $("#ToTop").fadeIn("slow")
+        });
+
+        if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+        $(window).scroll(function(){ 
+        if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+        else $("#OnBottom").fadeIn("slow")
+        });
+
+        $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+        $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+        });
+    </script>
+</body>
+</html>

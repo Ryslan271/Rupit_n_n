@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="static\css.css" href="img" rel='stylesheet' type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>RuPit</title>
+</head>
+<style>
+    body {
+        background-color: rgb(0, 0, 0);
+        color: var(--color-text-main);
+        font-family: var(--yandex-sans);
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #a1 {
+        color: #c7c5c5;
+        font-size: 26px;
+    }
+
+    #div_content6 {
+        background-color: rgb(54, 53, 53);
+        border-radius: 10px;
+        padding: 5px;
+        width: 1180px;
+        height: 670px;
+        margin: 0 auto;
+        line-height: 1.7;  
+    }
+
+    .a1{
+        color: #9ea2c5;
+    }
+
+    #h12 {
+        font-size: 35px;
+        color: rgb(37, 37, 37);
+    }
+</style>
+<body>
+    <div>
+        <div id="header">
+            <h1>
+                <a href='/content' id='atop'>Ru<span style="color: aquamarine;">Pit</span>:</a>
+                <a href='/content' id='atop' style="float: right;">Lili</a>
+                Урок №4
+                <a href="/#" id='alogin' style="float: right; margin-right: 80px;">Menu</a>
+            </h1>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="/Знакомство со средой" id="about">№1 Знакомство со средой</a>
+        <a href="/Простые встроенные функции" id="blog" style="top: 177px">№2 Простые встроенные функции</a>
+        <a href="/Знакомство с циклами" id="projects" style="top: 257px">№3 Знакомство с циклами</a>
+        <a href="/Функции" id="contact">№5 Функции</a>
+    </div>
+    <div id="div1" style="height: 19250px; margin-bottom: 50px;">
+        <div style="height: 30px;"></div>
+
+        <div style="margin-left: 280px;">
+            <h1 id="h12" >№4 - Знакомство со списками и словарями</h1>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 400px;">
+            <h1 id="h1" style="margin-left: 25px; color: rgb(255, 207, 102);">Глава 1: Списки</h1>
+            <h1 id="h1" style="margin-left: 25px;">1. Списки</h1>
+
+            <p id="p_1">Мы уже знаем тип данных, который называется множество и является коллекцией (контейнером), то есть позволяет хранить несколько элементов данных, и тип строка, который тоже обладает свойствами коллекции. Сегодня мы познакомимся с ещё одним типом-коллекцией, который называется список (list). Никогда не создавайте переменные с таким именем!</p>
+
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content_v" style="height: 530px;">
+            <h1 id="h11">Списки</h1>
+            <p id="p_1" style="color: #e6e9d2;">Списки являются очень гибкой структурой данных и широко используются в программах. Давайте рассмотрим основные свойства списка в сравнении с теми коллекциями, которые мы уже знаем:</p>
+            <p id="p_1" style="color: #e6e9d2;">— Список хранит несколько элементов под одним именем (<span style="color: rgb(72, 109, 42);">как и множество</span>)</p>
+            <p id="p_1" style="color: #e6e9d2;">— Элементы списка могут повторяться (<span style="color: #a14545;">в отличие от множества</span>)</p>
+            <p id="p_1" style="color: #e6e9d2;">— Элементы списка упорядочены и проиндексированы, доступна операция среза (<span style="color: rgb(72, 109, 42);">как в строке</span>)</p>
+            <p id="p_1" style="color: #e6e9d2;">— Элементы списка можно изменять (<span style="color: #a14545;">в отличие от строки</span>)</p>
+            <p id="p_1" style="color: #e6e9d2;">— Элементами списка могут быть значения любого типа: целые и действительные числа, строки и даже другие списки</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content_v" style="width: 700px; height: 430px; border-radius: 10%;">
+            <p style="text-align: center;">
+                <img src="static/img/list-set-str03.png">
+            </p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 2000px;">
+            <h1 id="h1" style="margin-left: 25px;">2. Создание списков</h1>
+
+            <p id="p_1">Чтобы работать со списком, нужно его создать. Для создания списка используется операция присваивания.</p>
+
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Чтобы задать готовый список, нужно справа от знака присваивания в квадратных скобках перечислить его элементы через запятую. Здесь создаётся список из первых пяти простых чисел, который помещается в переменную primes («простые числа»):</p>
+            </div>
+
+            <p id="p_1">Для того, чтобы создать пустой список, можно воспользоваться конструкцией [] или функцией <span style="color: rgb(214, 95, 95);">list</span>.</p>
+
+            <div id="div_content_prog" style="width: 500px; height: 200px; padding: 3px;">
+                <p id="p_1">empt1 = [] <span style="color: #808080;"># это пустой список</span></p>
+                <p id="p_1">empt2 = <span style="color: #6dc993;">list</span>()  <span style="color: #808080;"># и это тоже пустой список</span></p>
+            </div>
+
+            <p id="p_1">Теперь вспомним один из рассмотренных нами ранее способов создания cтроки из заданного количества повторяющихся подстрок. Такую строку можно легко составить путём умножения на число:</p>
+    
+            <div id="div_content_prog" style="width: 400px; height: 170px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>("<span style="color: #4d6dff;">'$' * 5 --></span>", '<span style="color: #4d6dff;">$</span>' * 5)</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>("<span style="color: #4d6dff;">'-|' * 4 + '-' --></span>", '<span style="color: #4d6dff;">-|</span>' * 4 + '<span style="color: #4d6dff;">-</span>')</p>
+            </div>
+
+            <p id="p_1">Получим:</p>
+
+            <div id="div_content_prog" style="width: 400px; height: 170px; padding: 3px;">
+                <p id="p_1">'<span style="color: #4d6dff;">$</span>' * <span style="color: #ff4500; font-weight: bold;">5</span> --> $$$$$</p>
+                <p id="p_1">'<span style="color: #4d6dff;">-|</span>' *  <span style="color: #ff4500; font-weight: bold;">4</span> + '<span style="color: #4d6dff;">-</span>' --> -|-|-|-|-</p>
+            </div>
+
+            <p id="p_1">Аналогично поступают и со списками:</p>
+
+            <div id="div_content_prog" style="width: 400px; height: 170px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>([<span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>] * <span style="color: #ff4500; font-weight: bold;">4</span>) </p>
+                <p id="p_1">[<span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>, <span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>, <span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>, <span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>]</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+    
+            <div id="div_content_v" style="width: 1120px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Для генерации списков и строк, состоящих строго из повторяющихся элементов (например, список из заданного количества нулей), умножение на число — самый короткий и красивый метод.</p>
+                <p id="p_1" style="color: #b4b6a6;">my_list = [<span style="color: #ff4500; font-weight: bold;">0</span>] * <span style="color: #ff4500; font-weight: bold;">4</span></p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 800px;">
+            <h1 id="h1" style="margin-left: 25px;">3. Индексация в списках</h1>
+
+            <p id="p_1">Чтобы получить отдельный элемент списка, нужно записать после него (или имени переменой, связанной с данным списком) в квадратных скобках номер (индекс) нужного элемента. Индекс отсчитывается с нуля — как в строках. Так же, как и в строках, для нумерации с конца разрешены отрицательные индексы.</p>
+            <p id="p_1">Таким образом, мы умеем использовать квадратные скобки в Python уже для трех вещей: задания нового списка (тогда внутри этих скобок перечисляются его элементы), получения элемента списка или строки по индексу (тогда в скобках указывается индекс) и получения среза строки.</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 170px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Сумма первых двух простых чисел:</span>', primes[<span style="color: #ff4500; font-weight: bold;">0</span>] + primes[<span style="color: #ff4500; font-weight: bold;">1</span>])</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Последнее из простых чисел в нашем списке:</span>', primes[<span style="color: #ff4500; font-weight: bold;">-1</span>])</p>
+            </div>
+
+            <p id="p_1">Как и в строках, попытка обратиться к индексу с несуществующим индексом вызовет ошибку:</p>
+
+            <div id="div_content_prog" style="width: 500px; height: 80px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(primes[<span style="color: #ff4500; font-weight: bold;">5</span>]) <span style="color: #808080;"># ошибка: index out of range</span></p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 3080px;">
+            <h1 id="h1" style="margin-left: 25px;">4. Добавление элемента в список</h1>
+
+            <p id="p_1">Добавление элемента в конец списка делается при помощи метода append (этот метод аналогичен методу add, используемому для добавления элементов в множество):</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 170px; padding: 3px;">
+                <p id="p_1">primes.<span style="color: rgb(134, 128, 128); font-weight: bold;">append</span>(<span style="color: #ff4500; font-weight: bold;">13</span>)</p>
+                <p id="p_1">primes.<span style="color: rgb(134, 128, 128); font-weight: bold;">append</span>(<span style="color: #ff4500; font-weight: bold;">15</span>) <span style="color: #808080;"># ой, ошиблись -- 15 составное число!</span></p>
+            </div>
+
+            <p id="p_1">Обратите внимание: для того, чтобы воспользоваться методом append, нужно, чтобы список был создан (при этом он может быть пустым).</p>
+
+            <div id="div_content_v" style="width: 1120px; height: 400px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Попытка применить метод append к несуществующему списку приведет к ошибке. Заметьте, что два вызова метода append в следующем примере добавляют элемент к двум разным спискам.</p>
+                <p id="p_1" style="color: #b4b6a6;">odd_numbers = [<span style="color: #ff4500; font-weight: bold;">1</span>, <span style="color: #ff4500; font-weight: bold;">3</span>, <span style="color: #ff4500; font-weight: bold;">5</span>, <span style="color: #ff4500; font-weight: bold;">7</span>, <span style="color: #ff4500; font-weight: bold;">9</span>, <span style="color: #ff4500; font-weight: bold;">11</span>, <span style="color: #ff4500; font-weight: bold;">13</span>, <span style="color: #ff4500; font-weight: bold;">15</span>, <span style="color: #ff4500; font-weight: bold;">17]</p>
+                <p id="p_1" style="color: #b4b6a6;">primes.<span style="color: rgb(134, 128, 128); font-weight: bold;">append</span>(<span style="color: #ff4500; font-weight: bold;">19</span>)</p>
+                <p id="p_1" style="color: #b4b6a6;">odd_numbers.<span style="color: rgb(134, 128, 128); font-weight: bold;">append</span>(<span style="color: #ff4500; font-weight: bold;">19</span>)</p>
+            </div>
+
+            <p id="p_1">Кроме того вы можете расширить имеющийся список любым итерабельным (перечисляемым) объектом с помощью метода extend:</p>
+
+            <div id="div_content_prog" style="width: 400px; height: 270px; padding: 3px;">
+                <p id="p_1">my_list = [<span style="color: #ff4500; font-weight: bold;">1</span>, <span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>]</p>
+                <p id="p_1">another_list = [<span style="color: #ff4500; font-weight: bold;">4</span>, <span style="color: #ff4500; font-weight: bold;">5</span>, <span style="color: #ff4500; font-weight: bold;">6</span>]</p>
+                <p id="p_1">my_list.<span style="color: rgb(134, 128, 128); font-weight: bold;">extend</span>(another_list)</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(my_list)</p>
+            </div>
+
+            <p id="p_1">Получим:</p>
+
+            <div id="div_content_prog" style="width: 200px; height: 80px; padding: 3px;">
+                <p id="p_1">[<span style="color: #ff4500; font-weight: bold;">1</span>, <span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>, <span style="color: #ff4500; font-weight: bold;">4</span>, <span style="color: #ff4500; font-weight: bold;">5</span>, <span style="color: #ff4500; font-weight: bold;">6</span>]</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 440px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Имейте в виду, что строка является итерируемой, поэтому, если вы расширите список со строкой, вы добавите каждый символ, когда будете перебирать строку (что может быть не так, как вы хотите):</p>
+                <p id="p_1" style="color: #b4b6a6;">my_list = [<span style="color: #ff4500; font-weight: bold;">1</span>, <span style="color: #ff4500; font-weight: bold;">2</span>, <span style="color: #ff4500; font-weight: bold;">3</span>]</p>
+                <p id="p_1" style="color: #b4b6a6;">another_list = "<span style="color: #4d6dff;">привет</span>"</p>
+                <p id="p_1" style="color: #b4b6a6;">my_list.<span style="color: rgb(134, 128, 128); font-weight: bold;">extend</span>(another_list)</p>
+                <p id="p_1" style="color: #b4b6a6;">print(my_list) <span style="color: #808080;"># [1, 2, 3, 'п', 'р', 'и', 'в', 'е', 'т']</span></p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 400px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">В отличие от отдельных символов в строках, элемент списка можно поместить справа от «=» в операторе присваивания и тем самым изменить этот элемент:</p>
+                <p id="p_1" style="color: #b4b6a6;">primes[<span style="color: #ff4500; font-weight: bold;">6</span>] = <span style="color: #ff4500; font-weight: bold;">17</span>  <span style="color: #808080;"># Исправляем ошибку:</span></p>
+                <p id="p_1" style="color: #b4b6a6;"><span style="color: #808080;">#  седьмое (нумерация элементов списка - с нуля!)</span></p>
+                <p id="p_1" style="color: #b4b6a6;"><span style="color: #808080;">#  простое число - не 15, а 17.</span></p>
+            </div>
+
+            <p id="p_1">Тем не менее, многие вещи, которые можно делать со строками, можно делать и со списками:</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 550px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(<span style="color: #6dc993;">len</span>(primes))  <span style="color: #808080;"># выводим длину списка</span></p>
+                <p id="p_1">primes += [<span style="color: #ff4500; font-weight: bold;">23</span>, <span style="color: #ff4500; font-weight: bold;">29</span>]  <span style="color: #808080;"># списки можно складывать, как и строки</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(primes)  <span style="color: #808080;"># выведет [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">if</span> <span style="color: #ff4500; font-weight: bold;">1</span> <span style="color: #ff7700; font-weight: bold;">in</span> primes:  <span style="color: #808080;"># можно проверять, содержится ли в списке элемент</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Мы считаем единицу простым числом.</span>')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">else</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Мы, как и всё остальное человечество, </span></p>
+                <p id="p_1" style="margin-left: 130px;"><span style="color: #4d6dff;">не считаем 1 простым числом.</span>')</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 1330px;">
+            <h1 id="h1" style="margin-left: 25px;">5. Перебор элементов списка</h1>
+
+            <p id="p_1">Во время выполнения программы текущее количество элементов списка всегда известно. Поэтому если нужно что-то сделать с каждым элементом списка (например, напечатать его на экране), можно перебрать элементы с помощью цикла for. При этом, как и для строк, возможны два варианта перебора: перебор индексов и перебор самих элементов.</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 350px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">for</span> i <span style="color: #ff7700; font-weight: bold;">in</span> <span style="color: #6dc993;">range</span>(<span style="color: #6dc993;">len</span>(primes)):</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #808080;"># выведем по очереди все элементы списка...</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Простое число номер</span>', i + <span style="color: #ff4500; font-weight: bold;">1</span>, '<span style="color: #4d6dff;">-</span>', primes[i]) </p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">for</span> p <span style="color: #ff7700; font-weight: bold;">in</span> primes:</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Квадрат числа</span>', p, '<span style="color: #4d6dff;">-</span>', p ** <span style="color: #ff4500; font-weight: bold;">2</span>)  <span style="color: #808080;"># и их квадраты</span></p>
+            </div>
+
+            <p id="p_1">Заметьте, что при использовании конструкции for i in range(len(имя_списка)) индексы перебираются в цикле очень удобно: от 0 включительно до длины списка не включительно. Таким образом можно перебрать все элементы списка.</p>
+            <p id="p_1">Цикл for нередко используется и для формирования списка, если мы заранее знаем, сколько элементов в нём должно быть:</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 390px; padding: 3px;">
+                <p id="p_1">n = <span style="color: #ff4500; font-weight: bold;">10</span></p>
+                <p id="p_1">a = []</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Введите</span>', n, '<span style="color: #4d6dff;">значений:</span>')</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">for</span> i <span style="color: #ff7700; font-weight: bold;">in</span> <span style="color: #6dc993;">range</span>(n):</p>
+                <p id="p_1">a.append(<span style="color: #6dc993;">input</span>())</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">Получился список строк:</span>', a)</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 1100px;">
+            <h1 id="h1" style="margin-left: 25px;">6. Срезы списков</h1>
+
+            <p id="p_1">Как и для строк, для списков определена операция взятия среза:</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 390px; padding: 3px;">
+                <p id="p_1">months = ['<span style="color: #4d6dff;">январь</span>', '<span style="color: #4d6dff;">февраль</span>', '<span style="color: #4d6dff;">март</span>', '<span style="color: #4d6dff;">апрель</span>', '<span style="color: #4d6dff;">май</span>', '<span style="color: #4d6dff;">июнь</span>', '<span style="color: #4d6dff;">июль</span>',</p>
+                <p id="p_1" style="margin-left: 120px;">'<span style="color: #4d6dff;">август</span>', '<span style="color: #4d6dff;">сентябрь</span>', '<span style="color: #4d6dff;">октябрь</span>', '<span style="color: #4d6dff;">ноябрь</span>', '<span style="color: #4d6dff;">декабрь</span>']</p>
+                <p id="p_1">spring = months[<span style="color: #ff4500; font-weight: bold;">2</span>:<span style="color: #ff4500; font-weight: bold;">5</span>]  <span style="color: #808080;"># spring == ['март', 'апрель', 'май']</span></p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">for</span> month <span style="color: #ff7700; font-weight: bold;">in</span> spring:</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>(month)</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 300px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Срезы можно использовать и для присваивания новых значений элементам списка. Например, если мы решим перевести на английский названия летних месяцев, то это можно сделать с помощью среза:</p>
+                <p id="p_1" style="color: #b4b6a6;">months[<span style="color: #ff4500; font-weight: bold;">5</span>:<span style="color: #ff4500; font-weight: bold;">8</span>] = ['<span style="color: #4d6dff;">June</span>', '<span style="color: #4d6dff;">July</span>', '<span style="color: #4d6dff;">August</span>']</p>
+            </div>
+
+            <p id="p_1">Теперь список months будет выглядеть так: [’январь’, ’февраль’, ’март’, ’апрель’, ’май’, ’June’, ’July’, ’August’, ’сентябрь’, ’октябрь’, ’ноябрь’, ’декабрь’]</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 700px;">
+            <h1 id="h1" style="margin-left: 25px;">7. Списки и массивы</h1>
+
+            <p id="p_1"> Во многих языках программирования (да и в самом Python — в недрах стандартной библиотеки) имеется другой тип данных с похожими свойствами — массив. Поэтому списки иногда называют массивами, хоть это и не совсем правильно.</p>
+        
+            <div id="div_content_v" style="width: 1120px; height: 300px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Элементы массива имеют одинаковый тип и располагаются в памяти одним куском, а элементы списка могут быть разбросаны по памяти как угодно и могут иметь разный тип. Всё это замедляет работу списков по сравнению с массивами, но придаёт им гораздо большую гибкость. Из этого различия вытекает и «Питонский путь» формирования списка: не создавать «пустой массив» и заполнять его значениями, а append’ить значения к изначально пустому списку.</p>
+            </div>
+
+            <p id="p_1">Вот еще кое какие сайты для ознокомления :D</p>
+            <p id="p_1"><a href="https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html" id="a_sat" target="_blank">Первый сайт</a> и <a href="https://pymanual.github.io/list.html" id="a_sat" target="_blank">второй сайт</a></p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 2050px;">
+            <h1 id="h1" style="margin-left: 25px; color: rgb(255, 207, 102);">Глава 2: Словари</h1>
+            <h1 id="h1" style="margin-left: 25px;">1. Знакомство со словарями</h1>
+
+            <p id="p_1">Списки — это удобный и самый популярный способ сохранить большое количество данных в одной переменной. Списки индексируют все хранящиеся в них элементы. Первый элемент, как мы помним, лежит по индексу 0, второй по индексу 1 и так далее. Такой способ хранения позволяет быстро обращаться к элементу списка, зная его индекс.</p>
+            
+            <div id="div_content_prog" style="width: 600px; height: 150px; padding: 3px;">
+                <p id="p_1">actors = ['<span style="color: #4d6dff;">Джонни Депп</span>', '<span style="color: #4d6dff;">Эмма Уотсон</span>', '<span style="color: #4d6dff;">Билли Пайпер</span>']</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(actors[<span style="color: #ff4500; font-weight: bold;">1</span>])</p>
+            </div>
+
+            <p id="p_1">Представим, что мы делаем свою онлайн-энциклопедию (наподобие Википедии) об актёрах мирового кино. Для каждого актёра нужно сохранить текст статьи о нём. Названием статьи будет строка, состоящая из фамилии и имени актёра. Как правильно хранить такие данные?</p>
+            <p id="p_1">Можно создать список кортежей. Каждый кортеж будет состоять из двух строк — названия и текста статьи.</p>
+
+            <div id="div_content_prog" style="width: 800px; height: 610px; padding: 3px;">
+                <p id="p_1">actors = [</p>
+                <p id="p_1" style="margin-left: 60px;">('<span style="color: #4d6dff;">Джонни Депп</span>', '<span style="color: #4d6dff;">Джон Кристофер Депп Второй родился 9 июня </span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #4d6dff;">1963 года в Овенсборо, Кентукки..</span>'),</p>
+                <p id="p_1" style="margin-left: 60px;">('<span style="color: #4d6dff;">Сильвестр Сталлоне</span>', '<span style="color: #4d6dff;">Сильвестр Гарденцио Сталлоне родился</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #4d6dff;">в Нью-Йорке. Его отец — иммигрант из Сицилии, ...</span>'),</p>
+                <p id="p_1" style="margin-left: 60px;">('<span style="color: #4d6dff;">Эмма Уотсон</span>', '<span style="color: #4d6dff;">Эмма Шарлотта Дуерр Уотсон родилась в семье</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #4d6dff;">английских адвокатов. В пять лет переехала вместе с семьей</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #4d6dff;">из Парижа в Англию...</span>'),</p>
+                <p id="p_1"># ...</p>
+                <p id="p_1">]</p>
+            </div>
+
+            <p id="p_1">Со временем количество статей значительно вырастет. Чтобы найти нужную статью по названию, нам придётся написать цикл for, который пройдёт по всем элементам списка actors и найдёт в нём кортеж, первый элемент которого равен искомому названию. В приведённом выше примере, чтобы найти статью об Эмме Уотсон, нам придётся в цикле пройти мимо Джонни Деппа и Сильвестра Сталлоне. Угадать заранее, что статья об Эмме Уотсон лежит после них, не получится.</p>
+            <p id="p_1">Корень этой проблемы в том, что списки индексируются целыми числами. Мы же хотим находить информацию не по числу, а по строке — названию статьи. Было бы здорово, если бы индексами могли быть не числа, а строки. В списках это невозможно, однако возможно в словарях!</p>
+
+            <div id="div_content_v" style="width: 1120px; height: 300px;">
+                <h1 id="h11">Словарь</h1>
+                <p id="p_1" style="color: #b4b6a6;">Словарь (в Python он называется dict) — это тип данных, позволяющий, как и список, хранить много данных. В отличие от списка в словаре для каждого элемента можно самому определить «индекс», по которому он будет доступен. Этот индекс называется ключом.</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 1550px;">
+            <h1 id="h1" style="margin-left: 25px;">2. Создание словаря</h1>
+
+            <p id="p_1">Вот пример создания словаря для энциклопедии об актёрах мирового кино:</p>
+
+            <div id="div_content_prog" style="width: 900px; height: 580px; padding: 3px;">
+                <p id="p_1">actors = {</p>
+                <p id="p_1" style="margin-left: 60px;">'<span style="color: #4d6dff;">Джонни Депп</span>': '<span style="color: #4d6dff;">Джон Кристофер Депп Второй родился 9 июня 1963 года</span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #4d6dff;">в Овенсборо, Кентукки..</span>',</p>
+                <p id="p_1" style="margin-left: 60px;">'<span style="color: #4d6dff;">Сильвестр Сталлоне</span>': '<span style="color: #4d6dff;">Сильвестр Гарденцио Сталлоне родился в Нью-Йорке.</span></p>
+                <p id="p_1" style="margin-left: 60px;"> <span style="color: #4d6dff;">Его отец, парикмахер Фрэнк Сталлоне — иммигрант из Сицилии, ...</span>',</p>
+                <p id="p_1" style="margin-left: 60px;">'<span style="color: #4d6dff;">Эмма Уотсон</span>': '<span style="color: #4d6dff;">Эмма Шарлотта Дуерр Уотсон родилась в семье английских </span></p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #4d6dff;">адвокатов. В пять лет переехала вместе с семьей из Парижа в Англию...</span>',</p>
+                <p id="p_1"># ...</p>
+                <p id="p_1">}</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 300px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Элементы словаря перечисляются в фигурных скобках (как и элементы множества!) и разделяются запятой. До двоеточия указывается ключ, а после двоеточия — значение, доступное в словаре по этому ключу.</p>
+            </div>
+
+            <p id="p_1">Пустой словарь можно создать двумя способами:</p>
+
+            <div id="div_content_prog" style="width: 200px; height: 210px; padding: 3px;">
+                <p id="p_1">d = <span style="color: #6dc993;">dict</span>()</p>
+                <p id="p_1"><span style="color: #808080;"># или так</span></p>
+                <p id="p_1">d = {}</p>
+            </div>
+
+            <p id="p_1">Вспомните, что создать пустое множество можно только используя функцию set(). Теперь понятно, почему это так — пустые фигурные скобки зарезервированы для создания словаря.</p>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 1200px;">
+            <h1 id="h1" style="margin-left: 25px;">3. Обращение к элементу словаря</h1>
+
+            <p id="p_1">После инициализации словаря мы можем быстро получать статью про конкретного актёра:</p>
+
+            <div id="div_content_prog" style="width: 350px; height: 90px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(actors['<span style="color: #4d6dff;">Эмма Уотсон</span>'])</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 300px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Обращение к элементу словаря выглядит как обращение к элементу списка, только вместо целочисленного индекса используется ключ. В качестве ключа можно указать выражение — Python вычислит его значение, прежде чем обратится к искомому элементу.</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_prog" style="width: 550px; height: 220px; padding: 3px;">
+                <p id="p_1">first_name = '<span style="color: #4d6dff;">Сильвестр</span>'</p>
+                <p id="p_1">last_name = '<span style="color: #4d6dff;">Сталлоне</span>'</p>
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(actors[first_name + ' ' + last_name])</p>
+            </div>
+
+            <p id="p_1">Если ключа в словаре нет, возникнет ошибка:</p>
+
+            <div id="div_content_prog" style="width: 550px; height: 220px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(actors['<span style="color: #4d6dff;">Несуществующий ключ</span>'])</p>
+                <p id="p_1">------------------------------------------</p>
+                <p id="p_1"><span style="color: #6dc993;">KeyError</span>: '<span style="color: #4d6dff;">Несуществующий ключ</span>'</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 2370px;">
+            <h1 id="h1" style="margin-left: 25px;">4. Добавление и удаление элементов</h1>
+
+            <p id="p_1">Важная особенность словаря — его динамичность. Мы можем добавлять новые элементы, изменять их или удалять. Изменяются элементы точно так же, как в списках, только вместо целочисленного индекса в квадратных скобках указывается ключ:</p>
+
+            <div id="div_content_prog" style="width: 650px; height: 90px; padding: 3px;">
+                <p id="p_1">actors['<span style="color: #4d6dff;">Эмма Уотсон</span>'] = '<span style="color: #4d6dff;">Новый текст статьи об Эмме Уотсон</span>'</p>
+            </div>
+
+            <p id="p_1">Также в словари можно добавлять и удалять новые элементы.</p>
+
+            <div id="div_content_v" style="width: 1120px; height: 400px;">
+                <h1 id="h11">Добавление элемента</h1>
+                <p id="p_1" style="color: #b4b6a6;">Добавление синтаксически выглядит так же, как и изменение:</p>
+                <p id="p_1">actors['<span style="color: #4d6dff;">Брэд Питт</span>'] = '<span style="color: #4d6dff;">Уильям Брэдли Питт, более известный как </span></p>
+                <p id="p_1" style="margin-left: 235px;"><span style="color: #4d6dff;">Брэд Питт — американский актёр и продюсер. </span></p>
+                <p id="p_1" style="margin-left: 235px;"><span style="color: #4d6dff;">Лауреат премии «Золотой глобус» за 1995 год </span></p>
+                <p id="p_1" style="margin-left: 235px;"><span style="color: #4d6dff;">...</span>'</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 470px;">
+                <h1 id="h11">Удаление элемента</h1>
+                <p id="p_1" style="color: #b4b6a6;">Для удаления можно использовать инструкцию del (как и в списках):</p>
+                <p id="p_1">del actors['<span style="color: #4d6dff;">Джонни Депп</span>']</p>
+                <p id="p_1"><span style="color: #808080;"># больше в словаре нет ни ключа 'Джонни Депп',</span></p>
+                <p id="p_1"><span style="color: #808080;"># ни соответствующего ему значения</span></p>
+                
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">print</span>(actors['<span style="color: #4d6dff;">Джонни Депп</span>'])</p>
+                <p id="p_1"><span style="color: #6dc993;">KeyError</span>: '<span style="color: #4d6dff;">Джонни Депп</span>'</p>
+            </div>
+
+            <div style="height: 30px;"></div>
+
+            <div id="div_content_v" style="width: 1120px; height: 400px;">
+                <h1 id="h11">Удаление элемента</h1>
+                <p id="p_1" style="color: #b4b6a6;">Удалять элемент можно и по-другому:</p>
+                <p id="p_1">actors.pop('<span style="color: #4d6dff;">Джонни Депп</span>')</p>
+                <p id="p_1" style="color: #b4b6a6;">Единственное отличие этого способа от вызова del — он возвращает удалённое значение. Можно написать так:</p>
+                <p id="p_1">deleted_value = actors.pop('<span style="color: #4d6dff;">Джонни Депп</span>')</p>
+            </div>
+
+            <p id="p_1">В переменную deleted_value положится значение, которое хранилось в словаре по ключу ’Джонни Депп’. В остальном этот способ идентичен оператору <span style="color: #eff1ff;">del</span>. В частности, если ключа ’Джонни Депп’ в словаре нет, возникнет ошибка <span style="color: #eff1ff;">KeyError</span>.</p>
+
+            <div id="div_content_v" style="width: 1120px; height: 350px;">
+                <h1 id="h11">Важно</h1>
+                <p id="p_1" style="color: #b4b6a6;">Чтобы ошибка не появлялась, этому методу можно передать второй аргумент. Он будет возвращён, если указанного ключа в словаре нет. Это позволяет реализовать безопасное удаление элемента из словаря:</p>
+                <p id="p_1">deleted_value = actors.pop('<span style="color: #4d6dff;">Джонни Депп</span>', <span style="color: #6dc993;">None</span>) </p>
+                <p id="p_1" style="color: #b4b6a6;">Если ключа ’Джонни Депп’ в словаре нет, в deleted_value попадёт <span style="color: #eff1ff;">None</span>.</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 600px;">
+            <h1 id="h1" style="margin-left: 25px;">5. Проверка наличия элемента в словаре</h1>
+
+            <p id="p_1">Оператор in позволяет проверить, есть ли ключ в словаре:</p>
+
+            <div id="div_content_prog" style="width: 550px; height: 150px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">if</span> '<span style="color: #4d6dff;">Джонни Депп</span>' <span style="color: #ff7700; font-weight: bold;">in</span> actors:</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">У нас есть статья про Джонни Деппа</span>')</p>
+            </div>
+
+            <p id="p_1">Проверить, что ключа нет, можно с помощью аналогичного оператора not in:</p>
+
+            <div id="div_content_prog" style="width: 550px; height: 150px; padding: 3px;">
+                <p id="p_1"><span style="color: #ff7700; font-weight: bold;">if</span> '<span style="color: #4d6dff;">Сергей Безруков</span>' <span style="color: #ff7700; font-weight: bold;">not in</span> actors:</p>
+                <p id="p_1" style="margin-left: 60px;"><span style="color: #ff7700; font-weight: bold;">print</span>('<span style="color: #4d6dff;">У нас нет статьи о Сергее Безрукове</span>')</p>
+            </div>
+        </div>
+
+        <div style="height: 30px;"></div>
+
+        <div id="div_content6" style="height: 300px;">
+            <h1 id="h1" style="margin-left: 25px;">Конец третьего урока.</h1>
+            <p id="p_1">Вот материал для лучшего ознакомления : <a href="https://pymanual.github.io/dict.html" id="a_sat" target="_blank">сайт первый:D</a>, <a href="https://pythonru.com/osnovy/python-dict" id="a_sat" target="_blank">сайт второй:D</a>, <a href="https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html" id="a_sat" target="_blank">сайт третий:D</a></p>
+            <p id="p_1">Если все понятно, то предлогаю пройти на 4 урок, а лучше отдохните и наберитесь сил</p>
+            <p id="p_1">Но все же вот ссылка ;)  <a href="/Функции" id="a1">Функции</a></p>
+        </div>
+        
+    </div>
+
+    <div class="scroll_panel">
+        <div class="go-up" id='ToTop'>⇧</div>
+        <div class="go-down" id='OnBottom'>⇩</div>
+    </div>
+
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+        if ($(window).scrollTop()>="250") $("#ToTop").fadeIn("slow")
+        $(window).scroll(function(){
+        if ($(window).scrollTop()<="250") $("#ToTop").fadeOut("slow")
+        else $("#ToTop").fadeIn("slow")
+        });
+
+        if ($(window).scrollTop()<=$(document).height()-"999") $("#OnBottom").fadeIn("slow")
+        $(window).scroll(function(){ 
+        if ($(window).scrollTop()>=$(document).height()-"999") $("#OnBottom").fadeOut("slow")
+        else $("#OnBottom").fadeIn("slow")
+        });
+
+        $("#ToTop").click(function(){$("html,body").animate({scrollTop:0},"slow")})
+        $("#OnBottom").click(function(){$("html,body").animate({scrollTop:$(document).height()},"slow")})
+        });
+    </script>
+</body>
+</html>
