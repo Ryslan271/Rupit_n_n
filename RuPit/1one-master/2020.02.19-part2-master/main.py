@@ -475,5 +475,7 @@ def not_found_error(error):
     return render_template('Error/503.html', f=f), 503
 
 
+
 if __name__ == '__main__':
-    app.run(port=8080, host='127.0.0.1')
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
